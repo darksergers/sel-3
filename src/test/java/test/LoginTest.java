@@ -16,7 +16,7 @@ public class LoginTest {
         loginPage.username();
         loginPage.password();
         loginPage.login();
-        
+
     }
     @AfterClass
     public static void aftr(){

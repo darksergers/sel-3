@@ -19,22 +19,22 @@ public class LoginPage {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get("http://localhost:8080/litecart/en/");
+        driver.get("http://localhost:8080/litecart/admin");
     }
     public static LoginPage start(){
         if (loginPage==null){
             loginPage = new LoginPage();
         }else {
-        driver.get("http://localhost:8080/litecart/en/");
+        driver.get("http://localhost:8080/litecart/admin");
 
     }
         return loginPage;
     }
     public void username(){
-        driver.findElement(By.name("email")).sendKeys("example@gmail.com");
+        driver.findElement(By.name("username")).sendKeys("admin");
     }
     public void password(){
-        driver.findElement(By.name("password")).sendKeys("example");
+        driver.findElement(By.name("password")).sendKeys("admin");
     }
     public void login(){
         driver.findElement(By.name("login")).click();
