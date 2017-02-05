@@ -36,8 +36,9 @@ public class LoginPage {
     public void password(){
         driver.findElement(By.name("password")).sendKeys("admin");
     }
-    public void login(){
+    public AdminPage login(){
         driver.findElement(By.name("login")).click();
+        return new AdminPage(driver);
     }
     public static void quit(){
         driver.quit();
