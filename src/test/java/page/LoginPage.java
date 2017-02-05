@@ -17,7 +17,7 @@ public class LoginPage {
     private LoginPage() {
         System.setProperty("webdriver.chrome.driver", "C:/Users/Сергей/Documents/webrivers/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("http://localhost:8080/litecart/admin");
     }
