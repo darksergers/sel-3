@@ -15,7 +15,7 @@ public class Catolog {
     public boolean subOk(String  selector) {// #box-latest-products > div > ul > li:nth-child(1)
         int size = driver.findElements(By.cssSelector(selector)).size();
         for (int i = 1; i <= size; i++) {
-            if (driver.findElements(By.cssSelector(selector+":nth-child(" + i + ")> a.link > div.image-wrapper > div")).size() == 0)
+            if (driver.findElements(By.cssSelector(selector+":nth-child(" + i + ")> a.link > div.image-wrapper > div")).size() != 1)
                 return false;
         }
         return true;
