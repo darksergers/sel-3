@@ -32,4 +32,9 @@ public class AdminPage {
     private boolean h10k() {
         return driver.findElements(By.cssSelector("h1")).size()>0;
     }
+
+    public Catolog catolog(){
+        driver.findElement(By.cssSelector("#sidebar > div.header > a:nth-child(1)")).click();
+        return new Catolog(driver);
+    }
 }
